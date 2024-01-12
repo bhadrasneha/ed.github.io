@@ -1,0 +1,677 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.50) 47%, rgba(0, 0, 0, 0.50) 100%);
+    background-blend-mode: screen;
+}
+
+body {
+    font-family: 'PT Serif', serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #030065;
+    font-size: 25px;
+}
+
+nav ul li a:hover {
+    color: #d53369;
+}
+
+/* Add this to your existing CSS or create a new CSS file 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: bisque;
+    min-width: 160px;
+    box-shadow: 5px 5px 8px 0px burlywood;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.dropdown-content a:hover {
+    background-color: burlywood;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}*/
+
+#apply {
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+#log {
+    padding: 0 10px;
+    margin: 0 10px;
+}
+#apply input {
+    width: 150px;
+    height: 70px;
+    font-size: 25px;
+    background-color: #c10242;
+    border: 2px solid darkred;
+    cursor: pointer;
+    color: #ccc;
+    border-radius: 10px;
+}
+
+
+#apply input:hover {
+    box-shadow: 0 5px 10px 4px rgb(242, 54, 123);
+}
+
+#log input {
+    width: 100px;
+    height: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: azure;
+    border: solid rgb(6, 6, 180);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#log input:hover {
+    background-color: #200065;
+    color: whitesmoke;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.logo img {
+    width: 100px;
+    height: 100px;
+    margin: 0 10px;
+}
+
+.homepage {
+    background: linear-gradient(109.6deg, rgb(6, 2, 2) 32.4%, rgb(137, 30, 47) 98.8%);
+    padding: 10px;
+    color: white;
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 30px;
+    margin-bottom: 15px;
+}
+
+.col-2 {
+    flex-basis: 40%;
+    min-width: 300px;
+}
+
+.col-2 .glass {
+
+    padding: 5px 5px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin-right: 20px;
+    margin-top: 10vh;
+    width: 450px;
+    height: 480px;
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+input {
+    width: 85%;
+    padding: 8px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.homepage .col-2 h1 {
+    font-size: 30px;
+    line-height: 45px;
+    margin: 20px 0;
+}
+
+
+.submit-btn {
+    margin: 10px;
+    text-align: left;
+
+}
+
+.submit-btn input {
+    width: 70%;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid white;
+    box-shadow: 1px 2px 0px whitesmoke;
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    cursor: pointer;
+}
+
+.submit-btn input:hover {
+    background-image: linear-gradient(rgb(170, 131, 244), rgb(203, 40, 203), pink);
+    background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%);
+}
+
+.submit-btn1 {
+    text-align: center;
+
+}
+
+.submit-btn1 input {
+
+    margin-bottom: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 1px 2px 0px whitesmoke;
+    font-size: 25px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+    cursor: pointer;
+}
+
+.submit-btn1 input:hover {
+    background-image: linear-gradient(rgb(170, 131, 244), rgb(203, 40, 203), pink);
+    background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%);
+}
+
+.alert p {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 360;
+    color: white;
+}
+
+.alert a {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    color: aqua;
+    text-decoration: none;
+}
+
+.alert a:hover {
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+.categories {
+    margin: 50px 10px;
+    background-image: url(bg-2.png);
+    background-blend-mode: screen;
+}
+
+.heading {
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto 35px;
+    position: relative;
+
+}
+
+.heading::after {
+    content: '';
+    background: #d53369;
+    width: 200px;
+    height: 5px;
+    /* Increase the height for a more prominent zigzag effect */
+    position: absolute;
+    bottom: -4px;
+    /* Adjust to vertically center the zigzag pattern */
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0;
+    /* Remove border-radius for a sharp zigzag effect */
+    clip-path: polygon(0% 0%, 25% 100%, 50% 0%, 75% 100%, 100% 0%);
+}
+
+
+.col-3 {
+    margin-bottom: 30px;
+    flex-basis: 20%;
+    min-width: 300px;
+    border: 1px solid rgb(173, 173, 244);
+    border-radius: 10px;
+
+}
+
+.content {
+    text-align: center;
+}
+
+.content img {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.col-3 .content {
+    padding: 10px 15px;
+    align-content: center;
+}
+
+.content h3 {
+    text-align: center;
+}
+
+.col-3 .content p {
+    text-align: center;
+    color: #030141;
+   
+}
+
+/*-------------featured courses-----------------*/
+
+/*.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}*/
+.col-4 {
+    flex-basis: 30%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.col-4 img {
+    width: 70px;
+    height: 70px;
+    padding: 2px 2px;
+    margin: 2px 2px;
+
+}
+
+.feautred-content {
+    height: 780px;
+    border-radius: 15px 50px;
+    box-shadow: 10px 0 10px 5px #fbbe8c;
+    background-color: #ffffff;
+    background-image: linear-gradient(319deg, #cdedfd 0%, #ffec82 37%, #ffcfd2 100%);
+}
+
+.featured-course {
+    padding: 15px 35px;
+}
+
+#time {
+    background-color: #99fbcd;
+    width: 250px;
+    border: 1px solid #99fbcd;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+#head {
+    font-size: 18px;
+}
+
+#order {
+    padding: 20px;
+    list-style-type: "⇒";
+}
+#order li {
+    padding: 4px 8px;
+}
+
+
+.submit-btn2 input {
+    margin-bottom: 10px;
+    border-radius: 15px 50px;
+    border: 1px solid rgb(242, 109, 155);
+    box-shadow: 1px 2px 0px whitesmoke;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #f8002f;
+    background-image: linear-gradient(326deg, #f8002f 0%, #000c14 74%);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.submit-btn2 input:hover {
+    color: #2b0e01;
+    border: transparent;
+    background-color: #dbf26e;
+    background-image: linear-gradient(319deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%);
+    box-shadow: 2px 0 5px 5px yellowgreen;
+
+}
+
+.title {
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 70px;
+    color: #030065;
+    font-size: 40px;
+}
+
+.title::after {
+    content: '';
+    background: #d53369;
+    width: 100px;
+    height: 5px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/*--------------------------career---------------------->*/
+.career-contain {
+    margin-left: 15px;
+    margin-right: 50px;
+    padding: 10px 15px;
+}
+
+#career-service {
+    text-align: center;
+    background-color: #cdf9cc;
+    font-weight: 600;
+}
+
+.latest-news {
+    text-align: center;
+
+}
+
+.news {
+    border: 1px solid greenyellow;
+    border-radius: 15px;
+    width: 300px;
+    padding: 30px 25px;
+    box-shadow: 5px 0 2px 0 greenyellow;
+}
+
+
+/* get us */
+.other-container {
+    background-color: #e9f4a1;
+    padding: 40px 0;
+}
+
+.other-news {
+    margin-left: 15px;
+    margin-right: 50px;
+    padding: 10px 15px;
+    text-align: center;
+
+}
+
+.new {
+    border: 1px solid rgb(252, 207, 151);
+    border-radius: 15px;
+    background-color: white;
+    width: 300px;
+    padding: 30px 25px;
+    box-shadow: 2px 0 8px 0 rgb(255, 168, 47);
+}
+
+.submit-btn3 input {
+    background-color: #0700b8;
+    color: #dfe3f4;
+    cursor: pointer;
+}
+
+.submit-btn3 input:hover {
+    background-color: #401502;
+}
+
+/* cert */
+.offer {
+    background: linear-gradient(109.6deg, rgb(245, 239, 249) 30.1%, rgb(207, 211, 236) 100.2%);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 40px 0;
+
+}
+
+#offer-img {
+    padding: 20px;
+    width: 500px;
+    height: 400px;
+}
+
+small {
+    color: brown;
+    font-size: 18px;
+}
+
+.offer .col-2 p {
+    font-size: 20px;
+    background: linear-gradient(109.6deg, rgb(0, 37, 84) 11.2%, rgba(0, 37, 84, 0.32) 100.2%);
+    width: 380px;
+    height: 40px;
+    padding: 8px 20px;
+    border-radius: 100px;
+    color: azure;
+}
+
+.offer .col-2 h1 {
+    font-size: 30px;
+    padding: 25px 0;
+}
+
+.btn {
+    text-decoration: none;
+    font-size: 25px;
+    color: #830388;
+
+}
+
+.btn:hover {
+    font-weight: bold;
+}
+
+.testimonial {
+    padding-top: 40px;
+}
+
+.testimonial .col-3 {
+    text-align: center;
+    box-shadow: 0 0 10px 0px rgb(241, 230, 225);
+    cursor: pointer;
+    padding: 20px 10px;
+    transition: transform 0.5s;
+}
+
+.testimonial .col-3 img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+
+}
+
+.testimonial .col-3:hover {
+    transform: translateY(-10px);
+}
+
+.fa.fa-quote-left {
+    font-size: 30px;
+    color: #f1701a;
+}
+
+.col-3 p {
+    font-size: 15px;
+    margin: 10px 0;
+    color: #401502;
+}
+
+.testimonial .col-3 h3 {
+    font-weight: 700;
+    color: rgb(56, 1, 56);
+    font-size: 18px;
+}
+/* brands */
+
+.marquee-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 30px;
+    margin-bottom: 15px;
+
+}
+
+
+.brands {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: #f9fcff;
+    background-image: linear-gradient(147deg, #f9fcff 0%, #dee4ea 74%);
+    padding: 10px 15px;
+}
+
+#title {
+    font-size: 30px;
+    padding: 20px 10px;
+    text-align: center;
+    margin: 10px 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #ff7878 74%);
+    color: #200065;
+}
+
+.col-5 {
+    width: 150px;
+    display: flex;
+    animation: scrolling 20s linear infinite;
+}
+
+.col-5 img {
+    width: 100%;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/*-------------news----------------->*/
+
+#news-head {
+    text-align: center;
+    padding: 10px 0;
+   
+}
+#img {
+    width: 150px;
+    height: 100px;
+}
+
+.footer {
+    background-color: #fff293;
+    background-image: linear-gradient(315deg, #fff293 0%, #ffe884 74%);
+    color: #3e2121;
+    font-size: 14px;
+    padding: 40px 0 20px;
+
+}
+
+/*.footer-col {
+    flex-basis: 50%;
+}*/
+.footer-col {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-col img {
+    width: 100px;
+    height: 80px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.footer-col ul li {
+    list-style-type: none;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #1a12b7;
+}
+
+.footer-col .social-link a i {
+    color: #1a12b7;
+}
+
+.footer-col ul li a:hover {
+    color: #d87a0f;
+}
