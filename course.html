@@ -1,0 +1,645 @@
+<html>
+
+<head>
+    <title>Online Learning Website</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="style6.css">-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.50) 47%, rgba(0, 0, 0, 0.50) 100%);
+            background-blend-mode: screen;
+        }
+
+        body {
+            font-family: 'PT Serif', serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        nav {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 50px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #030065;
+            font-size: 25px;
+        }
+
+        nav ul li a:hover {
+            color: #d53369;
+        }
+
+        /* Add this to your existing CSS or create a new CSS file */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: bisque;
+            min-width: 160px;
+            box-shadow: 5px 5px 8px 0px burlywood;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .dropdown-content a:hover {
+            background-color: burlywood;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+       
+        #apply {
+            padding: 0 10px;
+            margin: 0 10px;
+        }
+
+        #log {
+            padding: 0 10px;
+            margin: 0 10px;
+        }
+
+        #apply input {
+            width: 150px;
+            height: 70px;
+            font-size: 25px;
+            background-color: #c10242;
+            border: 2px solid darkred;
+            cursor: pointer;
+            color: #ccc;
+            border-radius: 10px;
+
+        }
+
+        #apply input:hover {
+            box-shadow: 0 5px 10px 4px rgb(242, 54, 123);
+        }
+
+        #log input {
+            width: 100px;
+            height: 50px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: azure;
+            border: solid rgb(6, 6, 180);
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+
+        #log input:hover {
+            background-color: #200065;
+            color: whitesmoke;
+        }
+
+
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+        }
+
+
+        /*.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}*/
+        .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 30px 30px;
+            margin-bottom: 15px;
+            margin-top: -50px;
+        }
+
+        .heading-content {
+            background-image: url(bg-2.png);
+            padding: 2px;
+        }
+
+        .col-4 {
+            flex-basis: 30%;
+            padding: 10px;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .col-4 img {
+            width: 70px;
+            height: 70px;
+            padding: 2px 2px;
+            margin: 2px 2px;
+
+        }
+
+        .feautred-content {
+
+            border-radius: 20px 50px 30px;
+            box-shadow: 10px 0 10px 8px rgb(187, 198, 254);
+            background-color: #ffffff;
+            background-image: linear-gradient(315deg, #ffffff 0%, #cad4ff 74%);
+        }
+
+        .featured-course {
+            padding: 15px 35px;
+        }
+
+        #time {
+            background-color: rgb(160, 144, 255);
+            width: 200px;
+            border: transparent;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        #head {
+            font-size: 18px;
+        }
+
+        #order {
+            padding: 20px;
+            list-style-type: "⇒";
+        }
+
+        .submit-btn2 input {
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            margin-bottom: 10px;
+            border-radius: 30px 50px 30px;
+            border: 1px solid rgb(242, 109, 155);
+            color: whitesmoke;
+            box-shadow: 1px 2px 0px whitesmoke;
+            font-size: 15px;
+            font-weight: 700;
+            background-color: #310e68;
+            background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+            cursor: pointer;
+        }
+
+        .submit-btn2 input:hover {
+            background-color: #faa499;
+            background-image: linear-gradient(319deg, #faa499 0%, #f7dd85 37%, #ffc55c 100%);
+            color: black;
+            box-shadow: 2px 0 5px 5px orangered;
+        }
+
+        .title {
+            text-align: center;
+            margin: 50px auto 80px;
+            position: relative;
+            line-height: 70px;
+            color: #030065;
+            font-size: 40px;
+            padding: 5px 0;
+        }
+
+        .title::after {
+            content: '';
+            background: #9160f4;
+            width: 700px;
+            height: 4px;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #one {
+            text-align: center;
+            margin: 0px auto 80px;
+            position: relative;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+            color: #470065;
+            font-size: 30px;
+        }
+
+
+        .page-btn {
+            margin: 0 auto 80px;
+
+        }
+
+        .page-btn span {
+            display: inline-block;
+            border: 1px solid rgb(232, 194, 194);
+            margin-left: 15px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            color: rgb(43, 19, 19);
+            background-color: azure;
+        }
+
+        .page-btn span:hover {
+            background-color: rgb(6, 6, 55);
+            color: beige;
+
+        }
+
+
+        /* footer */
+        .footer {
+            background-color: #fff293;
+            background-image: linear-gradient(315deg, #fff293 0%, #ffe884 74%);
+            color: #1d1010;
+            font-size: 14px;
+            padding: 40px 0 20px;
+
+        }
+
+
+        /*.footer-col {
+    flex-basis: 50%;
+}*/
+        .footer-col {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-col img {
+            width: 100px;
+            height: 80px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+
+        .footer-col ul li {
+            list-style-type: none;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: #1a12b7;
+        }
+
+        .footer-col .social-link a i {
+            color: #1a12b7;
+        }
+
+        .footer-col ul li a:hover {
+            color: #d87a0f;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="test.4.html"><span><img src="brandlogo/logo3.png"></span></a>
+
+                </div>
+                <nav>
+                    <ul class="navitems">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Curriculam</a></li>
+                        <li><a href="FAQ1.html">FAQ</a></li>
+                        <!--<div class="dropdown">-->
+                        <li><a href="course.html">Courses</a></li>
+                        <!--<div class="dropdown-content">
+                                <a href="boot2.html">Regiter</a>
+                                <a href="ex.html">Login</a>
+                                <a href="#">Account Settings</a>
+                                <a href="#">Logout</a>
+                            </div>
+                        </div>-->
+                    </ul>
+                    <a href="onlinelog.html" id="apply"><input type="submit" value="Apply Now"></a>
+                    <a href="onlinelog.html" id="log"> <input type="submit" value="Login"></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-------------featured courses----------------->
+
+    <div class="heading-content">
+        <h2 class="title">Take a look at our Amezingly Curated Online Courses! </h2>
+        <p id="one">Choose from thousands of online courses from top universities and specialist organisations.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-4">
+            <div class="feautred-content">
+                <div class="featured-course">
+                    <img src="brandlogo/bot.png" alt="pro1">
+                    <h3>Harnessing AI in Marketing and Communication</h3>
+                    <br>
+                    <div id="time">
+                        <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> 4 weeks</p>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 2 hours per week</p>
+                    </div>
+                    <br>
+                    <p>Learn how to harness AI technology to plan and deliver compelling content, automate marketing
+                        processes, and boost efficiency.</p>
+                    <br>
+
+                    <br><br>
+                    <div class="submit-btn2">
+                        <input type="submit" value="JOIN COURSE">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-4">
+            <div class="feautred-content">
+                <div class="featured-course">
+                    <img src="brandlogo/cyber-security.png" alt="pro1">
+                    <h3>Introduction to Cyber Security</h3> <br>
+                    <div id="time">
+                        <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> 8 weeks</p>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 3 hours per week</p>
+                    </div>
+                    <br>
+                    <p>Learn the essentials of cyber security and build your skills to better protect your digital
+                        information from security threats.</p>
+                    <br>
+
+                    <br><br>
+                    <div class="submit-btn2">
+                        <input type="submit" value="JOIN COURSE">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="feautred-content">
+                <div class="featured-course">
+                    <img src="brandlogo/learning.png" alt="pro1">
+                    <h3>Recommender Systems in Python</h3><br>
+                    <div id="time">
+                        <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> 6 weeks</p>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 3 hours per week</p>
+                    </div>
+                    <br>
+                    <p>Learn what recommender systems are, why they’ve become so popular, and how AI could help you
+                        implement your own.
+                        On this six-week course from National Tsing Hua University, you’ll learn</p>
+                    <br>
+
+                    <br>
+                    <div class="submit-btn2">
+                        <input type="submit" value="JOIN COURSE">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="feautred-content">
+                <div class="featured-course">
+                    <img src="brandlogo/audiobook.png" alt="pro1">
+                    <h3>Digital Literacy: Sustainable Development in the Information Age</h3><br>
+                    <div id="time">
+                        <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> 7 weeks</p>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 1 hour per week</p>
+                    </div>
+                    <br>
+                    <p>Gain key digital literacy skills to better understand the information you encounter and how you
+                        can contribute to sustainability.</p>
+                    </p><br>
+
+                    <br>
+                    <div class="submit-btn2">
+                        <input type="submit" value="JOIN COURSE">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="feautred-content">
+                <div class="featured-course">
+                    <img src="brandlogo/bioinformatics.png" alt="pro1">
+                    <h3>AI and Bioinformatics: Genomic Data Analysis</h3><br>
+                    <div id="time">
+                        <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> 3 weeks</p>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 2 hours per week</p>
+                    </div>
+                    <br>
+                    <p>Develop your knowledge of AI in bioinformatics and learn how to use WEKA to advance your
+                        bioinformatics research and career.</p><br>
+
+                    <br><br>
+                    <div class="submit-btn2">
+                        <input type="submit" value="JOIN COURSE">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="feautred-content">
+                <div class="featured-course">
+                    <img src="brandlogo/web-developer.png" alt="pro1">
+                    <h3>MERN Full-Stack Development Certification</h3><br>
+                    <div id="time">
+                        <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> 6 weeks</p>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 2 hours per week</p>
+                    </div>
+                    <br>
+                    <p>Deep Dive into JavaScript, its MERN Frameworks to become a Full Stack Developer.
+                        Discover the art of computer programming and learn what code can do with the Institute of Coding
+                        and the University of Leeds.</p><br>
+
+
+                    <div class="submit-btn2">
+                        <input type="submit" value="JOIN COURSE">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="feautred-content">
+                <div class="featured-course">
+                    <img src="brandlogo/app.png" alt="pro1">
+                    <h3>Safety By Design</h3><br>
+                    <div id="time">
+                        <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> 4 weeks</p>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 3 hours per week</p>
+                    </div>
+                    <br>
+                    <p>Learn how to design online products and services with user safety and rights at the core of the
+                        design and development process.</p><br>
+
+                    <br>
+                    <div class="submit-btn2">
+                        <input type="submit" value="JOIN COURSE">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="feautred-content">
+                <div class="featured-course">
+                    <img src="brandlogo/bot.png" alt="pro1">
+                    <h3>Generative AI in Higher Education</h3><br>
+                    <div id="time">
+                        <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> 2 weeks</p>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 3 hours per week</p>
+                    </div>
+                    <br>
+                    <p>Understand the uses and limitations of generative AI to address its challenges and harness its
+                        potential for higher education.</p><br>
+
+
+                    <div class="submit-btn2">
+                        <input type="submit" value="JOIN COURSE">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="feautred-content">
+                <div class="featured-course">
+                    <img src="brandlogo/game-development.png" alt="pro1">
+                    <h3>GameFi in the Web3 World</h3><br>
+                    <div id="time">
+                        <p><i class="fa fa-hourglass-half" aria-hidden="true"></i> 5 weeks</p>
+                        <p><i class="fa fa-clock-o" aria-hidden="true"></i> 3 hours per week</p>
+                    </div>
+                    <br>
+                    <p>Discover the emerging field of Game Finance and learn how gaming can be harnessed to create new
+                        business models and opportunities.</p><br>
+
+                    <br>
+                    <div class="submit-btn2">
+                        <input type="submit" value="JOIN COURSE">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="page-btn">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>&#8594;</span>
+    </div>
+
+
+    <!-------------------footer------------------------->
+
+    <footer class="footer">
+        <div class="footer-section">
+            <div class="row">
+                <div class="footer-col">
+                    <img src="brandlogo/logo3.png" alt="logo">
+                    <p>
+
+                        Empower your journey to mastery with CosmicMind.
+                        Dive into diverse courses designed for the digital age.
+                        Join our thriving community and unlock new possibilities.
+                        
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Join Affiliate</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Blog Post</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Payment Option</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-link">
+                        <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+
+                    </div>
+                    <a href="#"><img src="brandlogo/logo1.png" style="width: 80px; height: 80px;"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

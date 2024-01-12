@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #0d0a0b;
+            background-image: linear-gradient(315deg, #0d0a0b 0%, #009fc2 74%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+        }
+
+        .loginbox {
+            width: 550px;
+            height: 670px;
+            top: 70%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box;
+            background-color: bisque;
+            border-radius: 30px;
+            padding: 70px 30px;
+            margin: 10px 10px;
+        }
+
+        form {
+
+            padding: 0 5px 10px;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0 0 20px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(139, 2, 2);
+        }
+
+        .content .inputbox label {
+            font-size: 15px;
+            padding: 15px 5px;
+        }
+
+        .inputbox {
+            margin: 15px 10px;
+            padding: 5px 5px 5px;
+        }
+
+        .inputbox input {
+
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid white;
+            box-shadow: 1px 2px 0px whitesmoke;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            position: absolute;
+            top: -60px;
+            left: calc(46% - 50px);
+        }
+
+        .logo {
+            margin: 0 30px;
+            float: left;
+
+
+        }
+
+        .logo img {
+            width: 80px;
+            height: 80px;
+            margin: 40px 10px;
+        }
+
+        #image {
+            width: 50px;
+            height: 50px;
+            padding: 5px 10px;
+        }
+
+        .content2 {
+            padding: 2px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 180px;
+            height: 50px;
+            border-radius: 30px;
+            border: 1px solid beige;
+            background-color: aquamarine;
+        }
+
+
+        .submit-btn {
+            margin: 15px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .submit-btn input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid white;
+            box-shadow: 1px 2px 0px whitesmoke;
+            font-size: 25px;
+            font-weight: bold;
+            background-image: linear-gradient(rgb(236, 112, 112), orange, yellow);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <a href="test.4.html"><span><img src="brandlogo/logo3.png"></span></a>
+    </div>
+    <div class="loginbox">
+        <img src="brandlogo/logo5.png" class="avatar">
+        <h1>Welcome To CosmicMind</h1>
+        <h3>Login with your Email and Phone Number</h3>
+        <form>
+            <div class="content">
+                <div class="inputbox">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter email address" required>
+                </div>
+                <div class="inputbox">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter Password" required>
+                </div>
+                <div class="inputbox">
+                    <label for="phone">Phone Number</label>
+                    <input type="numeric" id="phone" placeholder="Enter phone number" maxlength="10" required>
+                </div>
+                <div class="submit-btn">
+                    <input type="submit" value="Register">
+
+                </div>
+
+                <div class="content2">
+                    <p>OR</p>
+
+                    <a href="#"><img src="brandlogo/google.ico" id="image">
+                        <a href="#"><img src="brandlogo/linkedin.svg" id="image">
+
+                </div>
+
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

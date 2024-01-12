@@ -1,0 +1,491 @@
+<html>
+
+<head>
+    <title>Online Learning Website</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!--<link rel="stylesheet" href="style6.css">-->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.50) 47%, rgba(0, 0, 0, 0.50) 100%);
+            background-blend-mode: screen;
+        }
+
+        body {
+            font-family: 'PT Serif', serif;
+            background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.50) 47%, rgba(0, 0, 0, 0.50) 100%);
+            background-blend-mode: screen;
+
+        }
+
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        nav {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 50px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #030065;
+            font-size: 25px;
+        }
+
+        nav ul li a:hover {
+            color: #d53369;
+        }
+
+        /* Add this to your existing CSS or create a new CSS file 
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: bisque;
+            min-width: 160px;
+            box-shadow: 5px 5px 8px 0px burlywood;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .dropdown-content a:hover {
+            background-color: burlywood;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }*/
+
+        /* Add this to your existing CSS or create a new CSS file */
+
+        /* .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+        }
+
+        nav {
+            flex: 2;
+            text-align: right;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #030065;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #d53369;
+        }
+*/
+        #apply {
+            padding: 0 10px;
+            margin: 0 10px;
+        }
+
+        #log {
+            padding: 0 10px;
+            margin: 0 10px;
+        }
+
+        #apply input {
+            width: 150px;
+            height: 70px;
+            font-size: 25px;
+            background-color: #c10242;
+            border: 2px solid darkred;
+            cursor: pointer;
+            color: #ccc;
+            border-radius: 10px;
+
+        }
+
+        #apply input:hover {
+            box-shadow: 0 5px 10px 4px rgb(242, 54, 123);
+        }
+
+        #log input {
+            width: 100px;
+            height: 50px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: azure;
+            border: solid rgb(6, 6, 180);
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+
+        #log input:hover {
+            background-color: #200065;
+            color: whitesmoke;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+        }
+
+
+        /*.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}*/
+        .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 30px 30px;
+            margin-bottom: 15px;
+            margin-top: -50px;
+        }
+
+
+        .title {
+            text-align: center;
+            margin: 50px auto 80px;
+            position: relative;
+            line-height: 70px;
+            color: #030065;
+            font-size: 40px;
+            padding: 5px 0;
+        }
+
+        .title::after {
+            content: '';
+            background: #9160f4;
+            width: 700px;
+            height: 4px;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .faq {
+            margin: 20px;
+            padding: 30px 20px;
+        }
+
+        details {
+            margin: 10px 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff293;
+            background-image: linear-gradient(315deg, #fff293 0%, #ffe884 74%);
+
+        }
+
+        summary {
+            background-color: #ca7968;
+            background-image: linear-gradient(315deg, #ca7968 0%, #0c0c0c 74%);
+            color: #90fe7f;
+            padding: 25px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 4px;
+        }
+
+        summary:hover {
+            background-color: #a5274d;
+        }
+
+        details p {
+            padding: 25px;
+        }
+
+        .faq-item {
+            list-style-type: lower-roman;
+            padding: 5px 40px;
+            margin: 5px 3px;
+        }
+
+        .faq-item li {
+            list-style-type: lower-roman;
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+
+
+
+
+
+        /* footer */
+        .footer {
+            background-color: #fff293;
+            background-image: linear-gradient(315deg, #fff293 0%, #ffe884 74%);
+            color: #1d1010;
+            font-size: 14px;
+            padding: 40px 0 20px;
+
+        }
+
+
+        /*.footer-col {
+    flex-basis: 50%;
+}*/
+        .footer-col {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-col img {
+            width: 100px;
+            height: 80px;
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+
+        .footer-col ul li {
+            list-style-type: none;
+        }
+
+        .footer-col ul li a {
+            text-decoration: none;
+            color: #1a12b7;
+        }
+
+        .footer-col .social-link a i {
+            color: #1a12b7;
+        }
+
+        .footer-col ul li a:hover {
+            color: #d87a0f;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="test.4.html"><span><img src="brandlogo/logo3.png"></span></a>
+
+                </div>
+                <nav>
+                    <ul class="navitems">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Curriculam</a></li>
+                        <li><a href="FAQ1.html">FAQ</a></li>
+                        <!--<div class="dropdown">-->
+                        <li><a href="course.html">Courses</a></li>
+                        <!--<div class="dropdown-content">
+                                <a href="boot2.html">Regiter</a>
+                                <a href="ex.html">Login</a>
+                                <a href="#">Account Settings</a>
+                                <a href="#">Logout</a>
+                            </div>
+                        </div>-->
+                    </ul>
+
+                    <a href="onlinelog.html" id="apply"><input type="submit" value="Apply Now"></a>
+                    <a href="onlinelog.html" id="log"> <input type="submit" value="Login"></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="faq">
+
+        <details>
+            <summary>What is CosmicMind Academy?</summary>
+            <p>Scaler Academy offers a structured, flexible and guided learning program for software engineers to
+                accelerate their careers.
+                This program is open for all software engineers irrespective of the number of years of work experience
+                or their current place of work.
+                <br><br><br> Our features include:
+            </p>
+            <ol class="faq-item">
+                <li>Live classes thrice a week, the timings for which are pre-defined</li>
+                <li>Tutors who have built scalable systems in the past and understand the real-life importance of DSA
+                    and
+                    System Design, not just interview-relevant material</li>
+                <li>Quick & hassle-free doubt resolution from our 100+ Teaching Assistants</li>
+                <li>Flexible program that helps you continue learning despite your super hectic schedule.</li>
+                <li>Career support - we provide job opportunities via our 100+ employer partners, mock interview, and
+                    career planning services</li>
+            </ol>
+        </details>
+        <br>
+
+        <details>
+            <summary>How do I register for a class?</summary>
+            <p>Visit our Classes page to view the schedule and simply click on the class you'd like to attend.
+                Follow the registration instructions provided.</p>
+        </details>
+        <br>
+
+        <details>
+            <summary>Are your classes suitable for beginners?</summary>
+            <p>Absolutely! Our classes cater to candidates of all levels, including beginners.</p>
+        </details>
+        <br>
+
+        <details>
+            <summary>Are private sessions available?</summary>
+            <p>Yes, we offer private sessions with our experienced instructors.
+                Contact us to discuss your goals and schedule a personalized session.</p>
+        </details>
+        <br>
+
+        <details>
+            <summary>When are the live classes held?</summary>
+            <p>Live classes are normally held 2 times a week, with the exact class days and timings being determined by
+                the batch.
+                However, given all learners would be software engineers that are currently working,
+                the classes would be held in the late evening or night on weekdays and any suitable time over the
+                weekends.</p>
+        </details>
+        <br>
+
+        <details>
+            <summary>What is I miss the lecture?</summary>
+            <p>All lectures are recorded and you will have access to the recordings after the lecture is completed.
+            </p>
+        </details>
+        <br>
+
+        <details>
+            <summary> Can I attend Part time?</summary>
+            <p>The program has a fixed schedule, during which you would attend live-lectures with a dedicated
+                instructor,
+                Teaching Assistant, and personal mentor.
+                15 hour weekly commitment is required for the duration of the program in order to achieve positive
+                results.</p>
+        </details>
+        <br>
+
+        <details>
+            <summary> Can I get Certificate?</summary>
+            <p>Yes, you will receive a certificate of CosmicMind Academy's program completion.</p>
+        </details>
+
+    </div>
+
+
+    <!-------------------footer------------------------->
+
+    <footer class="footer">
+        <div class="footer-section">
+            <div class="row">
+                <div class="footer-col">
+                    <img src="brandlogo/logo3.png" alt="logo">
+                    <p>
+
+                        Empower your journey to mastery with CosmicMind.
+                        Dive into diverse courses designed for the digital age.
+                        Join our thriving community and unlock new possibilities.
+
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Join Affiliate</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Blog Post</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Payment Option</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-link">
+                        <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+
+                    </div>
+                    <a href="#"><img src="brandlogo/logo1.png" style="width: 80px; height: 80px;"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,489 @@
+<html>
+
+<head>
+    <title>Apply</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-image: radial-gradient(73% 147%, #ffe8e8 59%, #fff4f1 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.50) 47%, rgba(0, 0, 0, 0.50) 100%);
+            background-blend-mode: screen;
+        }
+
+        body {
+            font-family: 'PT Serif', serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        nav {
+            flex: 1;
+            text-align: center;
+        }
+
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 50px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #030065;
+            font-size: 25px;
+        }
+
+        nav ul li a:hover {
+            color: #d53369;
+        }
+
+        #apply {
+            padding: 0 10px;
+            margin: 0 10px;
+        }
+
+        #log {
+            padding: 0 10px;
+            margin: 0 10px;
+        }
+
+        #apply input {
+            width: 150px;
+            height: 70px;
+            font-size: 25px;
+            background-color: #c10242;
+            border: 2px solid darkred;
+            cursor: pointer;
+            color: #ccc;
+            border-radius: 10px;
+
+        }
+
+        #apply input:hover {
+            box-shadow: 0 5px 10px 4px rgb(242, 54, 123);
+        }
+
+        #log input {
+            width: 100px;
+            height: 50px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: azure;
+            border: solid rgb(6, 6, 180);
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+
+        #log input:hover {
+            background-color: #200065;
+            color: whitesmoke;
+        }
+
+
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+        }
+
+        .homepage {
+            background-image: radial-gradient(73% 147%, #ffe8e8 59%, #fff4f1 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.50) 47%, rgba(0, 0, 0, 0.50) 100%);
+            background-blend-mode: screen;
+            padding: 8px;
+            color: white;
+        }
+
+        #image {
+            margin-top: -200px;
+
+        }
+
+
+        .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 30px 30px;
+            margin-bottom: 15px;
+        }
+
+        .col-2 {
+            flex-basis: 40%;
+            min-width: 300px;
+        }
+
+        /*.col-2 .glass {
+
+            padding: 20px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            
+            margin-top: 10vh;
+            width: 450px;
+            height: 800px;
+            text-align: center;
+            font-size: 20px;
+            text-shadow: 2px 2px 5px black;
+        }*/
+        #title {
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 25px 0;
+            background-color: #03e5b7;
+            background-image: linear-gradient(315deg, #03e5b7 0%, #037ade 74%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        /*button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }*/
+
+        label {
+            display: inline-block;
+            /* Display labels in a line */
+            text-align: center;
+            /* Align label text to the left */
+            margin-bottom: 10px;
+            /* Adjusted margin */
+        }
+
+        label input {
+            margin-right: 20px;
+            /* Add some space between the label and the input */
+        }
+
+        button {
+
+            font-size: 35px;
+            padding: 10px;
+            font-weight: bold;
+            cursor: pointer;
+            color: rgb(64, 3, 122);
+        }
+
+        button:hover {
+            color: rgb(218, 125, 32);
+            text-decoration: underline;
+        }
+
+        .gender-details {
+            padding: 15px 0;
+        }
+
+        .gender-title {
+            display: inline-block;
+            margin-bottom: 5px;
+            font-size: 20px;
+            color: #200065;
+            font-weight: 600;
+        }
+
+        .category {
+            display: flex;
+            align-items: center;
+        }
+
+        .category span {
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            color: #030065;
+        }
+
+        .category input {
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .category label {
+            font-size: 16px;
+            color: #01000f;
+        }
+
+        ::placeholder {
+            color: #200065;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+        }
+
+
+
+        /* Add or update styling for the sorting elements */
+        .pass,
+        .course {
+            margin-top: 20px;
+        }
+
+        .pass label,
+        .course label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+            color: #01000f;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .pass select,
+        .course select {
+            width: 90%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid papayawhip;
+        }
+
+        select {
+            border: 1px solid rgb(102, 3, 3);
+            padding: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #200065;
+
+        }
+
+        select:focus {
+            outline: none;
+        }
+
+        .alert p {
+            font-size: 15px;
+            font-style: italic;
+            font-weight: 360;
+            color: #3303de;
+        }
+
+        .alert a {
+            font-size: 18px;
+            font-style: italic;
+            font-weight: bold;
+            color: rgb(0, 255, 132);
+            text-decoration: none;
+        }
+
+        .alert a:hover {
+            text-decoration: underline;
+            color: rgb(226, 86, 43);
+        }
+
+
+
+        .submit-btn {
+            margin: 10px;
+            text-align: left;
+
+        }
+
+        .submit-btn input {
+            width: 90%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid white;
+            box-shadow: 1px 2px 0px whitesmoke;
+            font-size: 25px;
+            font-weight: bold;
+            background-color: #6617cb;
+            background-image: linear-gradient(315deg, #6617cb 0%, #cb218e 74%);
+            cursor: pointer;
+        }
+
+        .submit-btn input:hover {
+            background-image: linear-gradient(rgb(170, 131, 244), rgb(203, 40, 203), pink);
+            background: linear-gradient(90deg, #0700b8 0%, #00ff88 100%);
+            box-shadow: 2px 0 10px 5px rgb(15, 192, 192);
+            border: transparent;
+            color: #d9e4f5;
+        }
+
+
+
+        @media only screen and (max-width: 768px) {
+            /* Adjustments for smaller screens */
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                display: flex;
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .apply input,
+            .log input,
+            .submit-btn input {
+                width: 100%;
+            }
+
+            .col-2 {
+                flex-basis: 100%;
+            }
+
+            .glass {
+                padding: 20px;
+                width: 100%;
+            }
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="test.4.html"><span><img src="brandlogo/logo3.png"></span></a>
+
+                </div>
+                <nav>
+                    <ul class="navitems">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Curriculam</a></li>
+                        <li><a href="FAQ1.html">FAQ</a></li>
+                        <!--<div class="dropdown">-->
+                        <li><a href="course.html">Courses</a></li>
+                        <!--<div class="dropdown-content">
+                                    <a href="boot2.html">Regiter</a>
+                                    <a href="ex.html">Login</a>
+                                    <a href="#">Account Settings</a>
+                                    <a href="#">Logout</a>
+                                </div>
+                            </div>-->
+                    </ul>
+                    <a href="onlinelog.html" id="apply"><input type="submit" value="Apply Now"></a>
+                    <a href="onlinelog.html" id="log"> <input type="submit" value="Login"></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="homepage">
+        <div class="row">
+            <div class="col-2">
+                <img src="brandlogo/Sign up-bro.svg" alt="bodypic" id="image">
+
+            </div>
+            <div class="col-2">
+                <div class="glass">
+                    <h1 id="title"> Ready to become a Rockstar Developer?</h1>
+
+                    <form class="login-form">
+                        <div class="content">
+                            <input type="text" id="name" placeholder="Full Name" required>
+
+                            <input type="email" id="name" placeholder="Enter your valid email addess" required>
+                            <input type="password" id="name" placeholder="Password" required>
+                            <input type="password" id="name" placeholder="Confirm Password" required>
+                            <input type="numeric" id="name" placeholder="Enter phone number" maxlength="10" required>
+                            <br>
+                            <!-- Update the gender section in the form -->
+                            <div class="gender-details">
+                                <span class="gender-title">Gender:</span>
+                                <div class="category">
+                                    <span>Male</span> <input type="radio" id="male" name="gender">
+                                    <span>Female</span> <input type="radio" id="male" name="gender">
+                                    <span>Other</span> <input type="radio" id="male" name="gender">
+
+                                </div>
+                            </div>
+
+
+
+                            <br>
+                            <!-- Update the Graduation Year and Course Name sections in the form -->
+                            <div class="pass">
+                                <label for="graduationYear">Graduation Year:</label>
+                                <select id="graduationYear">
+                                    <option>Year</option>
+                                    <option>2022</option>
+                                    <option>2021 </option>
+                                    <option> 2020 </option>
+                                    <option>2019 </option>
+                                    <option>2018 </option>
+                                    <option>2017 </option>
+                                    <option> 2016 </option>
+                                    <option> 2015 </option>
+                                </select>
+                            </div>
+
+                            <div class="course">
+                                <label for="courseName">Course Name:</label>
+                                <select id="courseName">
+                                    <option>All Course</option>
+                                    <option>Game Developer</option>
+                                    <option>Web Developer</option>
+                                    <option>Full Stack Developer</option>
+                                    <option>AI and Machine Learning</option>
+                                    <option>Others</option>
+                                </select>
+                            </div>
+
+
+
+                        </div>
+                        <br>
+
+                        <div class="alert">
+                            <p>By clicking Sign Up, you agree to our
+                                <a href="#">Terms,</a>
+                                <a href="#">Privacy Policy</a> and Cookies Policy.
+                                You may receive SMS notifications from us and can opt out at any time.
+                            </p>
+                            <br>
+                        </div>
+                        <div class="submit-btn">
+                            <input type="submit" value="Register">
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
