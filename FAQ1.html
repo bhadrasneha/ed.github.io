@@ -325,6 +325,73 @@
         .footer-col ul li a:hover {
             color: #d87a0f;
         }
+
+        
+        /* Media Query for screens smaller than 768px */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            #apply,
+            #log {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-decoration: none;
+            }
+
+            #apply input,
+            #log input {
+                width: 100%;
+                margin-top: 10px;
+                text-decoration: none;
+            }
+        }
+
+        /* Media Query for screens smaller than 600px */
+        @media screen and (max-width: 600px) {
+            .title {
+                font-size: 30px;
+            }
+
+            .logo img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .faq {
+                padding: 20px;
+            }
+
+            details {
+                margin: 10px 5px;
+            }
+
+            summary {
+                padding: 15px;
+                font-size: 18px;
+            }
+
+            details p {
+                padding: 15px;
+            }
+        }
+        
     </style>
 
 </head>
