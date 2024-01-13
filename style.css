@@ -739,3 +739,81 @@ small {
 .footer-col ul li a:hover {
     color: #d87a0f;
 }
+
+/* --------------responsive----------------*/
+
+@media screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .col-2 .glass {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .col-2 {
+        flex-basis: 100%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    .submit-btn input,
+    .submit-btn1 input,
+    .submit-btn2 input,
+    .submit-btn3 input {
+        width: 100%;
+    }
+
+    .row {
+        padding: 20px;
+    }
+
+    .col-4 {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .footer-col img {
+        width: 70px;
+        height: 60px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+
+    .marquee-content {
+        padding: 10px;
+    }
+
+    
+
+    #title {
+        font-size: 20px;
+        padding: 10px 5px;
+    }
+
+    .col-3 {
+        margin-bottom: 20px;
+    }
+}
+
